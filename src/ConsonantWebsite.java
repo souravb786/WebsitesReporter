@@ -19,7 +19,11 @@ public class ConsonantWebsite extends Website {
 
 
     private static boolean isConsonant(char c) {
-        return "zxcvbnmsdfghjklqwrtpZXCVBNMSDFGHJKLQWRTP".indexOf(c) != -1;
+        int x = 0;
+		if(c<=65)x=c-65;
+		else x=c-97;
+		
+		return (x!=0 && x!=4 && x!=8 && x!=14 && x!=20);
     }
 }
 
